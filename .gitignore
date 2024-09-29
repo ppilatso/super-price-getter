@@ -1,0 +1,18 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables
+.env
+
+# Docker
+*.log
+docker-compose.yml
+
+# MacOS
+.DS_Store
+
+# TypeScript
+*.tsbuildinfo
