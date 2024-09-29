@@ -1,6 +1,6 @@
 interface IProduct {
   name: string;
-  price: number;
+  price: string;
   store: string;
 }
 
