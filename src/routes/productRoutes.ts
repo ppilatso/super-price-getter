@@ -9,8 +9,8 @@ router.post('/', async (req, res) => {
     const product = new Product({ name, price, store });
     await product.save();
     res.status(201).json(product);
-  } catch (error) {
-    res.status(400).json({ error: error.message });
+  } catch (error: unknown) {
+    res.status(400).json({ error: error });
   }
 });
 
@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
     const products = await Product.find();
     res.json(products);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: error });
   }
 });
 
